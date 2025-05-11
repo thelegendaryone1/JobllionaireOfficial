@@ -117,14 +117,19 @@
 }
 
 .nav-links li {
-  color: #fff;
-  font-size: 1.1rem;
+  color: #23223a;
+  font-size: 1rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   cursor: pointer;
   transition: color 0.2s;
+  text-align: left;
+  text-transform: none;
 }
 
 .nav-links li:hover {
-  color: #ffd700;
+  color: #3b82f6;
 }
 
 .nav-actions {
@@ -132,18 +137,24 @@
   gap: 1rem;
 }
 
-.sign-in, .contact-sales {
-  background: none;
-  border: 1.5px solid #fff;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
+.glass-btn {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(180, 180, 255, 0.25);
+  color: #3b3b6d;
+  padding: 0.6rem 1.6rem;
   border-radius: 2rem;
   font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 24px 0 rgba(60,40,120,0.08), 0 1.5px 0 #fff;
+  backdrop-filter: blur(8px) saturate(1.2);
+  -webkit-backdrop-filter: blur(8px) saturate(1.2);
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
 }
 
 .contact-sales {
+  background: none;
   background: #fff;
   color: #5433ff;
   font-weight: bold;
@@ -152,11 +163,6 @@
 
 .sign-in:hover {
   background: #fff2;
-}
-
-.contact-sales:hover {
-  background: #ffd700;
-  color: #222;
 }
 
 .hero-section {
@@ -174,10 +180,12 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.2rem;
-  background: linear-gradient(90deg, #5433ff, #20e2d7, #ff6a00);
+  background: linear-gradient(90deg, #3b82f6, #a21caf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 
 .subheadline {
@@ -219,9 +227,33 @@
   color: #222;
 }
 
+.hero-intro {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #3b3b6d;
+  text-shadow: 0 2px 8px rgba(60,40,120,0.08), 0 1px 0 #fff;
+  margin-bottom: 0.1rem;
+  margin-top: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-gradient {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(90deg, #3b82f6, #a21caf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
 @media (max-width: 800px) {
   .hero-section h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
   .navbar {
     flex-direction: column;
@@ -231,5 +263,11 @@
   .hero-section {
     margin-left: 2vw;
     max-width: 95vw;
+  }
+  .hero-gradient {
+    font-size: 3rem;
+  }
+  .hero-intro {
+    font-size: 0.9rem;
   }
 }
