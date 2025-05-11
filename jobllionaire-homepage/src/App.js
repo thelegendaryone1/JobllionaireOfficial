@@ -29,7 +29,9 @@ function App() {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 display: 'inline-block',
+                cursor: 'pointer',
               }}
+              onClick={() => window.location.reload()}
             >
               Jobllionaire™
             </motion.span>
@@ -50,7 +52,7 @@ function App() {
               style={{
                 opacity: 0.98,
                 boxShadow: '0 4px 32px 0 rgba(60,40,120,0.14), 0 2px 0 #fff',
-                fontWeight: 800,
+                fontWeight: 900,
               }}
             >
               Sign in
