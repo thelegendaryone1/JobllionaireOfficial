@@ -30,6 +30,7 @@ function App() {
                 backgroundClip: 'text',
                 display: 'inline-block',
                 cursor: 'pointer',
+                verticalAlign: 'middle',
               }}
               onClick={() => window.location.reload()}
             >
