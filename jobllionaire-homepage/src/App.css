@@ -170,8 +170,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 700px;
-  margin-left: 4vw;
+  max-width: 900px;
+  margin-left: 8vw;
   color: #fff;
   justify-content: center;
   min-height: 60vh;
@@ -198,10 +198,10 @@
 }
 
 .email-form {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 400px;
+  display: block;
+  width: auto;
+  max-width: none;
+  margin-top: 2.5rem;
 }
 
 .email-form input[type="email"] {
@@ -223,11 +223,6 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
-}
-
-.email-form button:hover {
-  background: #20e2d7;
-  color: #222;
 }
 
 .hero-intro {
@@ -273,4 +268,54 @@
   .hero-intro {
     font-size: 0.9rem;
   }
+}
+
+.flashy-btn {
+  background: linear-gradient(90deg, #3b82f6 0%, #a21caf 100%);
+  color: #fff;
+  font-weight: 900;
+  text-shadow: 0 2px 12px #3b82f6cc, 0 1px 0 #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 32px 0 rgba(60,40,120,0.14), 0 2px 0 #fff;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.glow-border-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 2rem;
+}
+
+.glow-border {
+  pointer-events: none;
+  position: absolute;
+  inset: -4px;
+  border-radius: 2.2rem;
+  z-index: 0;
+  background: conic-gradient(
+    from 0deg,
+    #3b82f6,
+    #a21caf,
+    #ff6a00,
+    #3b82f6
+  );
+  filter: blur(8px) brightness(1.5);
+  opacity: 0.85;
+  animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    filter: blur(8px) brightness(1.5);
+    background-position: 0% 50%;
+  }
+  100% {
+    filter: blur(8px) brightness(1.5);
+    background-position: 100% 50%;
+  }
+}
+
+.email-form .glow-border-wrapper {
+  display: block;
 }

@@ -48,7 +48,6 @@ function App() {
             <motion.button
               className="contact-sales glass-btn"
               whileHover={{ scale: 1.04, y: -3 }}
-              whileTap={{ scale: 1.08, y: -5 }}
               style={{
                 opacity: 0.98,
                 boxShadow: '0 4px 32px 0 rgba(60,40,120,0.14), 0 2px 0 #fff',
@@ -66,8 +65,17 @@ function App() {
             Discover a new era of opportunity where top jobs come to you, powered by Jobllionaire™.
           </p>
           <form className="email-form">
-            <input type="email" placeholder="Email address" />
-            <button type="submit">Start now</button>
+            <div className="glow-border-wrapper">
+              <motion.button
+                type="submit"
+                className="glass-btn flashy-btn"
+                whileHover={{ scale: 1.04, y: -3 }}
+                style={{ position: 'relative', zIndex: 1 }}
+              >
+                Start Your Journey
+              </motion.button>
+              <div className="glow-border"></div>
+            </div>
           </form>
         </div>
       </header>
